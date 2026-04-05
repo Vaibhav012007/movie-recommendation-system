@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 🎬 Movie Recommendation System
 
 ## 📌 1. Project Overview
@@ -185,6 +186,9 @@ To ensure meaningful recommendations, heuristic evaluation metrics were used:
 This project demonstrates how **TF-IDF vectorization combined with cosine similarity** can effectively power a recommendation system. It highlights the role of NLP in building scalable and intelligent applications.
 
 
+=======
+# movie-recommendation-system
+>>>>>>> 4b76b1e9026b62cc1ec8b4df41f24ff9281e708c
 =======
 # movie-recommendation-system
 >>>>>>> 4b76b1e9026b62cc1ec8b4df41f24ff9281e708c
