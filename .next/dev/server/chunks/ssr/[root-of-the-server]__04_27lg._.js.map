@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 10, "column": 0}, "map": {"version":3,"sources":["file:///C:/Projects/AI%20and%20ML/Machine%20Learning/Code/Projects/Movie-Reccomendation-System/Json-Website/pages/_app.js"],"sourcesContent":["import '../styles/global.css';\n\nexport default function MyApp({ Component, pageProps }) {\n  return <Component {...pageProps} />;\n}\n"],"names":["MyApp","Component","pageProps"],"mappings":";;;;;;;AAEe,SAASA,MAAM,EAAEC,SAAS,EAAEC,SAAS,EAAE;IACpD,qBAAO,qKAACD;QAAW,GAAGC,SAAS;;;;;;AACjC"}}]
+}

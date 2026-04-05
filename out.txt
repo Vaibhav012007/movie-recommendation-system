@@ -1,0 +1,18 @@
+
+> movie-recommender@1.0.0 dev
+> next dev
+
+⚠ Port 3000 is in use by process 49324, using available port 3001 instead.
+▲ Next.js 16.2.2 (Turbopack)
+- Local:         http://localhost:3001
+- Network:       http://172.17.178.254:3001
+✓ Ready in 894ms
+⨯ Another next dev server is already running.
+
+- Local:        http://localhost:3000
+- PID:          49324
+- Dir:          C:\Projects\AI and ML\Machine Learning\Code\Projects\Movie-Reccomendation-System\Website\Json-Website
+- Log:          .next\dev\logs\next-development.log
+
+Run taskkill /PID 49324 /F to stop it.
+[?25h
