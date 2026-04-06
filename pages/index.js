@@ -47,7 +47,9 @@ export default function Home({ movies }) {
   }, []);
 
   const filteredMovies = movies
-    ? movies.filter((m) => m.title.toLowerCase().includes(searchTerm.toLowerCase())).slice(0, 50) // Limit to 50 for performance
+    ? movies.filter((m) =>
+        m.title.toLowerCase().includes(searchTerm.toLowerCase())
+      )
     : [];
 
   const handleSelectMovie = (movie) => {

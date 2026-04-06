@@ -1,6 +1,5 @@
 import fs from "fs";
 import path from "path";
-import pLimit from "p-limit";
 
 let recData = null;
 let moviesData = null;
@@ -76,12 +75,16 @@ export default async function handler(req, res) {
     }
 
     // ⚡ Parallel fetch
-    const limit = pLimit(5); // 🔥 max 5 parallel requests
+    const recommendations = [];
 
-    const recommendations = await Promise.all(
-      indices.map((i) =>
-        limit(async () => {
-          const movie = moviesData[i];
+    const BATCH_SIZE = 5; // 🔥 control concurrency
+
+    for (let i = 0; i < indices.length; i += BATCH_SIZE) {
+      const batch = indices.slice(i, i + BATCH_SIZE);
+
+      const results = await Promise.all(
+        batch.map(async (idx) => {
+          const movie = moviesData[idx];
 
           if (!movie) {
             return { title: "Unknown", poster: null, id: null };
@@ -95,8 +98,10 @@ export default async function handler(req, res) {
             id: movie.id,
           };
         })
-      )
-    );
+      );
+
+  recommendations.push(...results);
+}
 
     res.status(200).json({ recommendations });
 
